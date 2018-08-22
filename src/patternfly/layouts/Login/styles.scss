@@ -1,0 +1,84 @@
+@import "../../patternfly-utilities";
+
+.pf-l-login {
+  --pf-l-login__container--GridColumnGap: var(--pf-global--spacer--3xl);
+  --pf-l-login--sm--Margin: var(--pf-global--spacer--lg);
+  --pf-l-login--WhiteText: var(--pf-global--Color--100);
+  --pf-l-login--h1: var(--pf-global--FontSize--2xl);
+
+  // This is a magic number to prevent the login layout grow more than what's defined in the specs.
+  --pf-l-login__container--MaxWidth: pf-size-prem(500px);
+
+  // This variable is full of magic numbers, they are unique to the login layout
+  --pf-l-login__container--GridTemplayteColumns: minmax(0, calc(196px - var(--pf-l-login__container--GridColumnGap))) minmax(350px, 500px) minmax(350px, 500px) minmax(0, calc(196px - var(--pf-l-login__container--GridColumnGap)));
+
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  @media (min-width: $pf-global--breakpoint--lg) {
+    justify-content: start;
+  }
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    align-items: center;
+  }
+
+  &__container {
+    // This is not mobile first but it help overwriting the max width on larger viewports
+    @media (max-width: $pf-global--breakpoint--lg) {
+      max-width: var(--pf-l-login__container--MaxWidth);
+    }
+
+    // Large viewports
+    @media (min-width: $pf-global--breakpoint--lg) {
+      display: grid;
+      grid-column-gap: var(--pf-l-login__container--GridColumnGap);
+      grid-template-columns: var(--pf-l-login__container--GridTemplayteColumns);
+      grid-template-areas:
+        ". main . ."
+        ". main header ."
+        ". main footer ."
+        ". main . .";
+    }
+  }
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}
+
+// TEMPORARY STUFF JUST TO VISUALIZE WHAT IT WILL LOOK LIKE
+// .form-header {
+//   height: 100px;
+//   background-color: rgb(211, 166, 19);
+// }
+// .form-fields {
+//   height: 300px;
+//   background-color: rgb(9, 109, 139);
+// }
+// .form-footer {
+//   height: 100px;
+//   background-color: rgb(166, 13, 204);
+// }
+
+// footer {
+//   display: flex;
+//   max-height: 40px;
+// }
+
+// footer > * {
+//   padding: 20px;
+// }
+
+// footer .logo {
+//   max-height: 40px;
+// }
