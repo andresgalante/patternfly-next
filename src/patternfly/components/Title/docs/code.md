@@ -1,5 +1,16 @@
 ## Overview
 The title component applies top and bottom margins, font-weight, font-size, and line-height to titles.
+
+The content component defines marging on headers. To regain the same spacing use spacer utility classes:
+
+| Title | Margin Top | Margin Bottom |
+| 4xl | pf-u-mt-lg | pf-u-mt-md |
+| 3xl | pf-u-mt-lg | pf-u-mt-md |
+| 2xl | pf-u-mt-lg | pf-u-mt-md |
+| xl | pf-u-mt-lg | pf-u-mt-md |
+| lg | pf-u-mt-lg | pf-u-mt-md |
+| md | pf-u-mt-lg | pf-u-mt-md |
+
 ## Usage
 
 | Class | Applied | Outcome
