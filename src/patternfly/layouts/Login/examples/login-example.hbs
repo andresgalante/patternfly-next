@@ -1,36 +1,11 @@
-<div class="pf-l-login">
-
-  <div class="pf-c-background-image"></div>
-
-  <div class="pf-l-login__container">
-
-    <div class="pf-l-login__header">
-      <img class="logo" src="/assets/images/patternfly-logo.svg">
-      <p>This is placeholder text only. Use this area to place any information or introductory message about your application that may be relevant to users.</p>
-    </div>
-
-    <div class="pf-l-login__main">
-      <div class="form-header">
-        <h1>Sign in to your account</h1>
-        {{#> dropdown id="dropdown-example-collapsed" pf-c-dropdown--HasToggleIcon="true"}}
-          English
-        {{/dropdown}}
-        <span>Need an account? <a href="https://whatever.com">Sign up</a>.</span>
-      </div>
-      <div class="form-fields">
-        <p>Form fields here</p>
-      </div>
-      <div class="form-footer">
-        <p>Bottom stuff here</p>
-      </div>
-    </div>
-
-    <footer class="pf-l-login__footer">
-      <a href="https://whatever.com">Terms of Use</a>
-      <a href="https://whatever.com">Help</a>
-      <a href="https://whatever.com">Privacy</a>
-    </footer>
-
-  </div>
-
-</div>
+{{#> login}}
+  {{#> login-header}}
+    Header
+  {{/login-header}}
+  {{#> login-main}}
+    Main
+  {{/login-main}}
+  {{#> login-footer}}
+    Footer
+  {{/login-footer}}
+{{/login}}

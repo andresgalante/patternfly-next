@@ -39,6 +39,7 @@
         ". main . ."
         ". main header ."
         ". main footer ."
+        ". main . ."
         ". main . .";
     }
   }
@@ -55,30 +56,3 @@
     grid-area: footer;
   }
 }
-
-// TEMPORARY STUFF JUST TO VISUALIZE WHAT IT WILL LOOK LIKE
-// .form-header {
-//   height: 100px;
-//   background-color: rgb(211, 166, 19);
-// }
-// .form-fields {
-//   height: 300px;
-//   background-color: rgb(9, 109, 139);
-// }
-// .form-footer {
-//   height: 100px;
-//   background-color: rgb(166, 13, 204);
-// }
-
-// footer {
-//   display: flex;
-//   max-height: 40px;
-// }
-
-// footer > * {
-//   padding: 20px;
-// }
-
-// footer .logo {
-//   max-height: 40px;
-// }

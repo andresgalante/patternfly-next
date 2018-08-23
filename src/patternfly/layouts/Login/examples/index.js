@@ -12,8 +12,8 @@ export default () => {
   const loginSimpleExample = LoginSimpleExample();
 
   return (
-    <Documentation docs={Docs}>
-      <Example heading="Login Simple" handlebars={loginSimpleExampleRaw} minHeight="20em">
+    <Documentation docs={Docs} className="is-layout-page">
+      <Example heading="Login Simple" fullPageOnly="true" handlebars={loginSimpleExampleRaw} minHeight="20em">
         {loginSimpleExample}
       </Example>
     </Documentation>

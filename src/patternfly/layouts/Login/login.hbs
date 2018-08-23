@@ -1,6 +1,9 @@
-<div class="pf-l-login {{pf-l-login--modifier}}"
+<div class="pf-l-login{{#if pf-l-login--modifiers}}{{pf-l-login--modifiers}}{{/if}}"
+  {{#if pf-l-login--attributes}}{{{pf-l-login--attributes}}}{{/if}}
   {{#if pf-l-login__id}}
     id="{{pf-l-login__id}}"
   {{/if}}>
-  {{> @partial-block}}
+  <div class="pf-l-login__container">
+    {{> @partial-block}}
+  </div>
 </div>
