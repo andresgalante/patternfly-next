@@ -15,9 +15,12 @@
   --pf-l-login__header--sm--PaddingLeft: var(--pf-global--spacer--md);
   --pf-l-login__header--sm--PaddingRight: var(--pf-global--spacer--md);
   --pf-l-login__header--xl--MarginBottom: var(--pf-global--spacer--2xl);
+  --pf-l-login__header--xl--MarginTop: var(--pf-global--spacer--3xl);
   --pf-l-login__header-brand--MarginBottom: var(--pf-global--spacer--lg);
   --pf-l-login__header-brand--xl--MarginBottom: var(--pf-global--spacer--2xl);
   --pf-l-login__main--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-l-login__footer--sm--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-l-login__footer--sm--PaddingRight: var(--pf-global--spacer--md);
 
   display: flex;
   justify-content: center;
@@ -65,7 +68,7 @@
   }
 
   @media (min-width: $pf-global--breakpoint--xl) {
-    margin-top: 64px;
+    margin-top: var(--pf-l-login__header--xl--MarginTop);
     margin-bottom: var(--pf-l-login__header--xl--MarginBottom);
   }
 }
@@ -89,4 +92,9 @@
 
 .pf-l-login__footer {
   grid-area: footer;
+
+  @media (max-width: $pf-global--breakpoint--sm) {
+    padding-right: var(--pf-l-login__footer--sm--PaddingRight);
+    padding-left: var(--pf-l-login__footer--sm--PaddingLeft);
+  }
 }
