@@ -28,6 +28,16 @@
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-login-box--BackgroundColor);
+
+  // If the first child isn't a header, then we need to put the header's top padding there
+  :first-child:not(.pf-c-login-box__header) {
+    padding-top: var(--pf-c-login-box__header--PaddingTop);
+  }
+
+  // If the last child isn't the footer, then we need to put the footer's bottom padding there
+  :last-child:not(.pf-c-login-box__footer) {
+    padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
+  }
 }
 
 .pf-c-login-box__header {
@@ -52,20 +62,4 @@
   padding-right: var(--pf-c-login-box__footer--PaddingRight);
   padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
   padding-left: var(--pf-c-login-box__footer--PaddingLeft);
-}
-
-// If the first child isn't a header, then we need to put the header's top padding there
-.pf-c-login-box__body,
-.pf-c-login-box__footer {
-  &:first-child {
-    padding-top: var(--pf-c-login-box__header--PaddingTop);
-  }
-}
-
-// If the last child isn't the footer, then we need to put the footer's bottom padding there
-.pf-c-login-box__header,
-.pf-c-login-box__body {
-  &:last-child {
-    padding-bottom: var(--pf-c-login-box__footer--PaddingBottom);
-  }
 }
